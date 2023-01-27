@@ -1,0 +1,341 @@
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  color: rgb(95, 95, 95);
+}
+
+.container-dashboard {
+  width: 96%;
+  height: 90vh;
+  background-color: white;
+
+  border-radius: 4px;
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.1);
+
+  overflow: hidden;
+}
+
+.controller-dashboard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgb(157, 224, 255);
+
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.controller {
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(76, 187, 238);
+  font-family: var(--font-normal);
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  margin: 1rem 1rem;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  transition: 300ms ease-in-out;
+}
+
+.controller:hover {
+  transform: translateY(3px);
+}
+
+.dashboardhome {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.dashboardpegawai {
+  width: 100%;
+  height: 86%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  .controller {
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+
+    span {
+      margin: 0 5px;
+    }
+
+    .pegawai-icons {
+      margin-top: 3px;
+    }
+  }
+}
+
+.pegawai-controller {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cari-pegawai {
+  width: 50%;
+  height: 30px;
+  padding: 20px 20px;
+
+  font-size: 1rem;
+  font-family: var(--font-normal);
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 4px;
+}
+
+.change-pegawai {
+  transition: 300ms ease-in-out;
+}
+
+.tambah-pegawai {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid rgb(179, 179, 179);
+  padding: 1rem;
+  margin: 1rem;
+
+  button {
+    margin-top: 3rem;
+    width: 500px;
+    height: 3rem;
+  }
+}
+
+.splitting {
+  width: 100%;
+  display: flex;
+}
+
+.form-pegawai {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.input-pegawai {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+
+  label {
+    font-size: 1rem;
+    color: gray;
+  }
+
+  input,
+  select {
+    width: 70%;
+    font-size: 1.25rem;
+    padding: 5px 1rem;
+  }
+
+  select {
+    cursor: pointer;
+  }
+}
+
+table {
+  /*   border: 1px solid #ccc; */
+  border-collapse: collapse;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table tr {
+  background-color: #ffffff90;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.thead {
+  background-color: rgb(102, 102, 102);
+  color: #fff;
+}
+
+table th,
+table td {
+  padding: 20px;
+  text-align: center;
+  font-weight: 300;
+}
+
+table th {
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+  .thead {
+    background-color: rgb(67 56 202);
+    color: #fff;
+  }
+
+  table caption {
+    font-size: 35px;
+    font-weight: 700;
+    color: #00000090;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .controller-dashboard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(157, 224, 255);
+
+    border-bottom: 1px solid rgb(212, 212, 212);
+  }
+
+  .controller {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  .tambah-pegawai {
+    display: flex;
+    min-height: 200vh;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(179, 179, 179);
+    padding: 1rem;
+    margin: 4rem 0;
+  
+    button {
+      margin-top: 3rem;
+      width: 200px;
+      height: 3rem;
+    }
+  }
+
+  .splitting {
+    flex-direction: column;
+  }
+
+  .input-pegawai {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+  
+    label {
+      font-size: 1rem;
+      color: gray;
+    }
+  
+    input,
+    select {
+      width: 95%;
+      font-size: 1.25rem;
+      padding: 5px 1rem;
+    }
+  
+    select {
+      cursor: pointer;
+    }
+  }
+
+  .form-pegawai {
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pegawai-controller {
+
+    input {
+      width: 200px;
+    }
+
+    margin: 1rem 0;
+    flex-direction: column;
+  }
+
+  .dashboardhome img {
+    width: 50%;
+  }
+
+  .container-dashboard {
+    height: 200vh;
+  }
+}
+
+.setting {
+  padding: 1rem;
+}
