@@ -108,3 +108,20 @@
   display: flex;
   background-color: #1b1b1b;
 }
+
+@media (max-width:600px ) {
+  .homepages {
+    flex-direction: column;
+  }
+
+  .home-rt-side {
+    width: 90%;
+    height: 200vh;
+    padding: 10vh;
+    overflow: scroll;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+}

@@ -106,7 +106,7 @@ function Dashboardpegawai() {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "Something went wrong!",
+          text: "Something wrong with your input please put right input",
         });
       }
     }
